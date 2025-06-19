@@ -133,9 +133,18 @@ img {
 @import './components/forms.css';
 @import './components/cards.css';
 @import './components/modals.css';
+
+/* Импорт стилей компонентов */
 @import './layout/header.css';
 @import './layout/footer.css';
+@import './layout/mobile-menu.css';
 @import './layout/navigation.css';
+@import './layout/social-buttons.css';
+
+/* Импорт стилей страниц */
+@import './pages/about.css';
 @import './pages/home.css';
 @import './pages/equipment.css';
 @import './pages/contacts.css';
+@import './pages/analog.css';
+@import './pages/partners.css';
