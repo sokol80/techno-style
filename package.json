@@ -1,6 +1,7 @@
 {
   "name": "techno-style",
   "version": "1.0.0",
+  "type": "module",
   "description": "Корпоративный сайт ТехноСтиль - поставка промышленного оборудования",
   "main": "src/main.js",
   "private": true,
@@ -27,7 +28,7 @@
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
     "terser": "^5.24.0",
-    "vite": "^5.1.1"
+    "vite": "^6.3.5"
   },
   "dependencies": {
     "aos": "^2.3.4",
