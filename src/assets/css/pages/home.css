@@ -1,0 +1,70 @@
+/* Стили для главной страницы (home.html) */
+.categories,
+.hero,
+.advantages,
+.about-preview,
+.partners-preview,
+.contact-form-section {
+  margin-bottom: var(--spacing-xxl);
+}
+.section__title {
+  text-align: left;
+}
+/* Equipment Categories Section */
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 2 колонки одинаковой ширины */
+  gap: 30px; /* Отступы между карточками */
+}
+
+.advantages {
+  background-color: var(--secondary-blue);
+}
+
+.advantages__container {
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xxl);
+}
+
+.advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 50px;
+}
+.advantages__title {
+  text-align: center;
+  color: var(--white);
+}
+
+.contact-form-section__text {
+  padding-left: var(--spacing-xl);
+  padding-right: var(--spacing-xl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-preview__stats {
+  margin-bottom: var(--spacing-md);
+}
+.partners__slider {
+  margin-bottom: var(--spacing-md);
+}
+/* Адаптивность для планшетов */
+@media (max-width: 992px) {
+  .categories__grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+    gap: 20px;
+  }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 576px) {
+  .categories__grid {
+    grid-template-columns: 1fr; /* 1 колонка на мобильных */
+    gap: 15px;
+  }
+}
+
+/* Advantages Section */
+/* (Ваши существующие стили для .advantages__grid, если есть) */
+
+/* About Preview Section */

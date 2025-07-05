@@ -1,0 +1,109 @@
+/* components/buttons.css */
+
+/* Базовый стиль кнопки */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  transition: var(--transition-base);
+  cursor: pointer;
+  white-space: nowrap;
+  min-height: 44px; /* Для мобильных устройств */
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Основная кнопка */
+.btn--primary {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background: var(--secondary-blue);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Контурная кнопка */
+.btn--outline {
+  border: 2px solid var(--primary-blue);
+  color: var(--primary-blue);
+  background: transparent;
+}
+
+.btn--outline:hover:not(:disabled) {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+/* CTA кнопка */
+.btn--cta {
+  background: var(--accent-orange);
+  color: var(--white);
+  font-size: var(--font-size-lg);
+  padding: 16px 32px;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.btn--cta:hover:not(:disabled) {
+  background: #d97706;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+}
+
+/* Размеры кнопок */
+.btn--small {
+  padding: 8px 16px;
+  font-size: var(--font-size-sm);
+  min-height: 36px;
+}
+
+.btn--large {
+  padding: 16px 32px;
+  font-size: var(--font-size-lg);
+  min-height: 52px;
+}
+
+/* Кнопка на всю ширину */
+.btn--full {
+  width: 100%;
+}
+
+/* Состояние загрузки */
+.btn .btn-loader {
+  display: none;
+}
+
+.btn.loading .btn-text {
+  display: none;
+}
+
+.btn.loading .btn-loader {
+  display: inline-block;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .btn {
+    padding: 14px 20px;
+    font-size: var(--font-size-sm);
+    min-height: 48px; /* Увеличиваем для мобильных */
+  }
+
+  .btn--cta {
+    padding: 18px 24px;
+    font-size: var(--font-size-base);
+  }
+}

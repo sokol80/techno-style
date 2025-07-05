@@ -1,0 +1,145 @@
+/* main.css */
+
+/* CSS Custom Properties (Variables) */
+:root {
+  /* Цвета */
+  --primary-blue: #07598f;
+  --secondary-blue: #07598f;
+  --accent-orange: #f59e0b;
+  --text-dark: #1f2937;
+  --text-gray: #444444;
+  --bg-light: #f8fafc;
+  --border-gray: #e5e7eb;
+  --black: #000000;
+  --white: #ffffff;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+
+  /* Типографика */
+  --font-primary: 'Open Sans', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 2rem; /* 32px */
+
+  /* Spacing */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-xxl: 3rem; /* 48px */
+
+  /* Transitions */
+  --transition-base: 0.3s ease;
+  --transition-fast: 0.15s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+  /* Breakpoints для использования в JS */
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1280px;
+}
+
+/* Базовые стили */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+/* Типографика */
+h1,
+h2,
+h3 {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-xl);
+}
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+}
+h2 {
+  font-size: var(--font-size-2xl);
+}
+h3 {
+  font-size: var(--font-size-xl);
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Ссылки */
+a {
+  /* color: var(--primary-blue); */
+  text-decoration: none;
+  transition: var(--transition-base);
+  /*color: inherit;  Наследует цвет текста от родителя */
+  text-decoration: none; /* Убирает подчёркивание */
+  cursor: pointer; /* Курсор-указатель (по умолчанию, но можно явно указать) */
+  background-color: transparent; /* Прозрачный фон */
+  border: none; /* Убирает границы (если есть) */
+  outline: none; /* Убирает контур при фокусе */
+  -webkit-tap-highlight-color: transparent; /* Убирает подсветку на мобильных */
+}
+
+/* Изображения */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+
+/* Медиа-запросы для типографики */
+@media (max-width: 768px) {
+  :root {
+    --font-size-3xl: 1.875rem; /* 30px */
+    --font-size-2xl: 1.25rem; /* 20px */
+    --font-size-xl: 1.125rem; /* 18px */
+  }
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}

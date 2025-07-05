@@ -1,0 +1,40 @@
+.tab-buttons {
+  margin-bottom: var(--spacing-md);
+}
+.tab-button {
+  font-size: var(--font-size-xl);
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-right: var(--spacing-md);
+  padding: var(--spacing-sm);
+  position: relative;
+}
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+button.tab-button:hover,
+button.tab-button.active {
+  color: var(--primary-blue) !important;
+}
+
+.tab-button::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-blue);
+  transition: width var(--transition-base);
+}
+
+button.tab-button:hover::after,
+button.tab-button.active::after {
+  width: 100% !important;
+}

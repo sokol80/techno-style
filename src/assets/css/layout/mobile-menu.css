@@ -1,0 +1,70 @@
+/* Мобильная навигация */
+
+.mobile-menu {
+  display: none;
+}
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  padding: var(--spacing-sm);
+  cursor: pointer;
+  gap: 4px;
+}
+
+.navbar-toggle span {
+  width: 24px;
+  height: 3px;
+  background: var(--text-dark);
+  border-radius: 3px;
+  transition: all var(--transition-base);
+}
+
+.navbar-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  border-bottom: 1px solid var(--border-gray);
+  padding: var(--spacing-md);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+  z-index: 99;
+}
+
+.mobile-nav.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav .navbar-nav {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+.mobile-nav .nav-item {
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.mobile-nav .nav-link {
+  display: block;
+  padding: var(--spacing-md) 0;
+}

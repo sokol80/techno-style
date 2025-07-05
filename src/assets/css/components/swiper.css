@@ -1,0 +1,51 @@
+.hero__slide {
+  background: var(--black);
+  width: 100%;
+  height: 550px;
+}
+.swiper-slide {
+  text-align: left;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper__container {
+  position: relative;
+}
+
+.hero__slide img {
+  display: block;
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.hero__content {
+  position: absolute;
+
+  left: 20px;
+  bottom: 50px;
+}
+
+.hero__title {
+  color: var(--white);
+}
+.hero__description {
+  color: var(--white);
+}
+
+.partner-slide {
+  border: 1px #c9c9c9 solid;
+  border-radius: 4px;
+  padding: var(--spacing-md);
+  display: flex;
+}
+.partner-slide img {
+  display: block;
+  height: 90px;
+  object-fit: cover;
+  margin-bottom: var(--spacing-md); /* Отступ между лого и текстом */
+}
