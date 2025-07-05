@@ -4,6 +4,7 @@ import { resolve } from 'path';
 import injectHTML from 'vite-plugin-html-inject';
 
 export default defineConfig({
+  base: '/techno-style/', // Важно для корректных относительных путей
   root: 'src',
   plugins: [injectHTML()],
   resolve: {
@@ -17,7 +18,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: '../docs',
+    outDir: '../dist',
     emptyOutDir: true,
     rollupOptions: {
       input: {
