@@ -1,5 +1,5 @@
 // alert('JS файл подключен!');
-import '../css/reset.css';
+
 import '../css/main.css';
 
 /* Импорт компонентов */
